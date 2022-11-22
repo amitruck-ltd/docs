@@ -316,10 +316,13 @@
         <ul class="search-results"></ul>
       <ul id="toc" class="toc-list-h1">
           <li>
-            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
           </li>
           <li>
             <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+          </li>
+          <li>
+            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
           </li>
           <li>
             <a href="#customers" class="toc-h1 toc-link" data-title="Customers">Customers</a>
@@ -340,13 +343,7 @@
             <a href="#attendances" class="toc-h1 toc-link" data-title="Attendances">Attendances</a>
           </li>
           <li>
-            <a href="#fueling" class="toc-h1 toc-link" data-title="Fueling">Fueling</a>
-          </li>
-          <li>
             <a href="#billing" class="toc-h1 toc-link" data-title="Billing">Billing</a>
-          </li>
-          <li>
-            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
           </li>
       </ul>
         <ul class="toc-footer">
@@ -357,39 +354,9 @@
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id='authentication'>Authentication</h1>
-<blockquote>
-<p>To authorize, use this code:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"John Doe"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TestPassword3!"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-
-</span></code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
-curl <span class="s2">"api_endpoint_here"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre></div><h1 id='errors'>Errors</h1>
-<p>Amitruck 2.0 uses the HTTP standards error codes. Below is the summary of the status to expect.
-CODE | Description
---------- | -----------
-20x | Everything went well
-300 | Your request has been redirected
-400 | The data submitted is invalid.
-401 | Access Denied. Check Your credentials
-403 | Forbidden. You don&#39;t have enough permissions
-50x | Amitruck 2.0 internal error. Amitruck Engineers are notified.</p>
-<h1 id='customers'>Customers</h1>
-<p>This section contains API related to customers such as customer&#39;s onboarding</p>
-<h1 id='transporters'>Transporters</h1>
-<p>This section contains API documentation related to transporters such as transporter&#39;s onboarding</p>
-<h1 id='drivers'>Drivers</h1>
-<p>This section contains API documentation for drivers</p>
-<h1 id='vehicles'>Vehicles</h1>
-<p>This section contains API documentation for vehicles</p>
-<h1 id='trips-and-orders'>Trips and Orders</h1>
-<p>This section cintains API documentatio for trips </p>
-<h1 id='attendances'>Attendances</h1><h1 id='fueling'>Fueling</h1><h1 id='billing'>Billing</h1><h1 id='errors'>Errors</h1>
+        <h1 id='introduction'>Introduction</h1>
+<p>Welcome to the Amitruck 2.0 API! You can use our API to access Amitruck API endpoints.</p>
+<h1 id='errors'>Errors</h1>
 <p>Amitruck 2.0 uses the HTTP standards error codes. Below is the summary of the status to expect.</p>
 
 <p>The Amitruck 2.0 API uses the following error codes:</p>
@@ -449,7 +416,26 @@ CODE | Description
 <td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
 </tr>
 </tbody></table>
+<h1 id='authentication'>Authentication</h1>
+<blockquote>
+<p>To authorize, use this code:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"John Doe"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TestPassword3!"</span><span class="w">
+</span><span class="p">}</span><span class="w">
 
+</span></code></pre></div><h1 id='customers'>Customers</h1>
+<p>This section contains API related to customers such as customer&#39;s onboarding</p>
+<h1 id='transporters'>Transporters</h1>
+<p>This section contains API documentation related to transporters such as transporter&#39;s onboarding</p>
+<h1 id='drivers'>Drivers</h1>
+<p>This section contains API documentation for drivers</p>
+<h1 id='vehicles'>Vehicles</h1>
+<p>This section contains API documentation for vehicles</p>
+<h1 id='trips-and-orders'>Trips and Orders</h1>
+<p>This section cintains API documentatio for trips </p>
+<h1 id='attendances'>Attendances</h1><h1 id='billing'>Billing</h1>
       </div>
       <div class="dark-box">
           <div class="lang-selector">
