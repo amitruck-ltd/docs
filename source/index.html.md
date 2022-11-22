@@ -22,6 +22,7 @@ includes:
   - trips
   - attendance
   - billing
+  - fueling
 
 search: true
 
