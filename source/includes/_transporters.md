@@ -1,8 +1,6 @@
 # Transporters
 This section contains API documentation related to transporters such as transporter's onboarding
 
-# Errors
-
 Amitruck 2.0 uses the HTTP standards error codes. Below is the summary of the status to expect.
 
 The Amitruck 2.0 API uses the following error codes:
