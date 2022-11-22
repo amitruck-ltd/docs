@@ -316,9 +316,6 @@
         <ul class="search-results"></ul>
       <ul id="toc" class="toc-list-h1">
           <li>
-            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
-          </li>
-          <li>
             <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
           </li>
           <li>
@@ -360,9 +357,7 @@
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id='introduction'>Introduction</h1>
-<p>Welcome to the Amitruck 2.0 API! You can use our API to access Amitruck API endpoints.</p>
-<h1 id='authentication'>Authentication</h1>
+        <h1 id='authentication'>Authentication</h1>
 <blockquote>
 <p>To authorize, use this code:</p>
 </blockquote>
@@ -395,11 +390,9 @@ CODE | Description
 <h1 id='trips-and-orders'>Trips and Orders</h1>
 <p>This section cintains API documentatio for trips </p>
 <h1 id='attendances'>Attendances</h1><h1 id='fueling'>Fueling</h1><h1 id='billing'>Billing</h1><h1 id='errors'>Errors</h1>
-<aside class="notice">
-This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
-</aside>
+<p>Amitruck 2.0 uses the HTTP standards error codes. Below is the summary of the status to expect.</p>
 
-<p>The Kittn API uses the following error codes:</p>
+<p>The Amitruck 2.0 API uses the following error codes:</p>
 
 <table><thead>
 <tr>
@@ -407,6 +400,10 @@ This error section is stored in a separate file in <code>includes/_errors.md</co
 <th>Meaning</th>
 </tr>
 </thead><tbody>
+<tr>
+<td>20x</td>
+<td>Everything went well</td>
+</tr>
 <tr>
 <td>400</td>
 <td>Bad Request -- Your request is invalid.</td>
