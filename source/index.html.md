@@ -13,12 +13,12 @@ includes:
   - errors
   - authentication
   - customers
-  # - transporters
-  # - drivers
-  # - vehicles
-  # - trips
-  # - attendance
-  # - billing
+  - transporters
+  - drivers
+  - vehicles
+  - trips
+  - attendance
+  - billing
   - fueling
 
 search: true
