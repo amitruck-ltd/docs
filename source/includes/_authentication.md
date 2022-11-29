@@ -32,8 +32,13 @@
     ]
 }
 ```
+Amitruck 2.0 APIs are grouped into two categories when it comes to authentication. Some require authentication others don't require authentication. **user registration** API does not require authentication. A user with access to the endpoint URL and has below payload can create register without being authenticated. 
 
-On a preffered client navigate to the Register endpoint with url [https://dev.api.amitruck.co/v2/auth/user/register/](https://dev.api.amitruck.co/v2/auth/user/register/). The following are the request and response payload in JSON format.
+This API allows you to register on Amitruck 2.0. Once the registration is successfully, an email will be sent do the user and you'll need to activate it by clicking on the activation link before the account can be activated on the system. 
+
+Amitruck 2.0 is built around the SAAS concept, and each time the registration happens outside the invitation, the user team will be automatically created by the system, and the names of the person registering will be used as the team name. However the user has right to change the team name there after.
+
+On a preffered client navigate to the Register endpoint with URL [https://dev.api.amitruck.co/v2/auth/user/register/](https://dev.api.amitruck.co/v2/auth/user/register/). The following are the request and response payload in JSON format.
 
 Item | Value
 ---------- | -------
