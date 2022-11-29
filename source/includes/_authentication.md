@@ -3,23 +3,11 @@
 
 ```json
 {
-    "email": "test@amitruck.com",
-    "phone_number": "254700500200",
-    "names": "Amitrurk User",
-    "password": "Test1234",
-    "password_confirm": "Test1234"
-
-}
-
-```
-
-```typescript
-{
-    "email": "test@amitruck.com",
-    "phone_number": "254700500200",
-    "names": "Amitrurk User",
-    "password": "Test1234",
-    "password_confirm": "Test1234"
+    "email": "testuser@amtruck.com",
+    "phone_number": "+25470052355", 
+    "names": "Test User",
+    "password": "Qazwsxedcrfv123!",
+    "password_confirm": "Qazwsxedcrfv123!"
 
 }
 
@@ -34,16 +22,60 @@
     "message": "Registration Successful",
     "data": [
         {
-            "id": 3,
-            "names": "Amitrurk User",
-            "email": "test@amitruck.com",
-            "phone_number": "254700500200"
+            "id": 37,
+            "names": "Test User",
+            "email": "testuser@amtruck.com",
+            "phone_number": "+25470052355"
         }
-    ],
-    "token": "7f82a49e98030b4476858786a3f3ebac274b6ca4a87691e21696dfe15b6a1431"
+    ]
 }
 ```
-With A valid Access token, we can use it to be able to access other API endpoints. We shall start by looking at the user register endpoint. On Post man navigate to the Register request with url [https://dev.api.amitruck.co/v2/auth/)user/register/](https://dev.api.amitruck.co/v2/auth/user/register/). The following are the request and response payload in JSON format.
+
+## User Registration
+On a preffered client navigate to the Register request with url [https://dev.api.amitruck.co/v2/auth/user/register/](https://dev.api.amitruck.co/v2/auth/user/register/). The following are the request and response payload in JSON format.
+
+
+
+> Login Request Payload:
+
+```json
+{ 
+    "email":"testtr@amtruck.com",
+    "password": "Qazwsxedcrfv123!"
+}
+
+```
+
+> Login Response Payload:
+
+```json
+{
+    "status": "Success",
+    "code": 201,
+    "message": "Registration Successful",
+    "data": [
+        {
+            "id": 37,
+            "names": "Test User",
+            "email": "testuser@amtruck.com",
+            "phone_number": "+25470052355"
+        }
+    ]
+}
+```
+## User Login
+On a preffered client navigate to the Login request with url [https://dev.api.amitruck.co/v2/auth/user/login/](https://dev.api.amitruck.co/v2/auth/user/login/). The following are the request and response payload in JSON format. This endpoint provides the Acccess token to be used to authenticate further requests.
+
+
+## Change Password
+
+## Invite User
+
+## Get All Users
+
+## Login Otp
+
+## User Registration
 
 
 
