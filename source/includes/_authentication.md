@@ -150,7 +150,10 @@ AUTHORIZATION | Bearer Token
 ## Get All Users
 > Invite User Request Payload:
 
+```json
   none
+```
+
 > Invite User Response Payload:
 
 ```json
