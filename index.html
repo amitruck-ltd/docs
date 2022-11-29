@@ -631,27 +631,30 @@
 </tbody></table>
 <h2 id='get-all-users'>Get All Users</h2>
 <blockquote>
-<p>Invite User Request Payload:
-  none
-Invite User Response Payload:
-<code>json
-[
-    {
-        &quot;id&quot;: 1,
-        &quot;names&quot;: &quot;Amitruck Admin&quot;,
-        &quot;email&quot;: &quot;admin2@amitruck.com&quot;,
-        &quot;phone_number&quot;: &quot;07162352782&quot;
-    },
-    {
-        &quot;id&quot;: 34,
-        &quot;names&quot;: &quot;Amitruck Admin&quot;,
-        &quot;email&quot;: &quot;admin@admin.com&quot;,
-        &quot;phone_number&quot;: &quot;0757000000&quot;
-    }
-]
-</code>
-On a preffered client navigate to the get all users endpoint with url <a href="https://dev.api.amitruck.co/v2/auth/user/users/">https://dev.api.amitruck.co/v2/auth/user/users/</a>. The following are the request and response payload in JSON format.</p>
+<p>Invite User Request Payload:</p>
 </blockquote>
+
+<p>none</p>
+
+<blockquote>
+<p>Invite User Response Payload:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"names"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Amitruck Admin"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"admin2@amitruck.com"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"phone_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"07162352782"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">34</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"names"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Amitruck Admin"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"admin@admin.com"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"phone_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0757000000"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div>
+<p>On a preffered client navigate to the get all users endpoint with url <a href="https://dev.api.amitruck.co/v2/auth/user/users/">https://dev.api.amitruck.co/v2/auth/user/users/</a>. The following are the request and response payload in JSON format.</p>
 
 <table><thead>
 <tr>
@@ -678,22 +681,22 @@ On a preffered client navigate to the get all users endpoint with url <a href="h
 </tbody></table>
 <h2 id='login-otp'>Login Otp</h2>
 <blockquote>
-<p>Login Otp Response Payload:
-<code>json
-{ 
-    &quot;username&quot;:&quot;testtr@amtruck.com&quot;
-}
-</code>
-Login Otp Response Payload:
-<code>json
-{
-    &quot;status&quot;: &quot;success&quot;,
-    &quot;code&quot;: 200,
-    &quot;message&quot;: &quot;We&#39;ve sent you an OTP to your email&quot;
-}
-</code>
-On a preffered client navigate to the Login Otp endpoint with url <a href="https://dev.api.amitruck.co/v2/auth/user/login/otp/">https://dev.api.amitruck.co/v2/auth/user/login/otp/</a>. The following are the request and response payload in JSON format. This endpoint require to be authenticated and the password of the authenticaded user will be updated.</p>
+<p>Login Otp Response Payload:</p>
 </blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w"> 
+    </span><span class="nl">"username"</span><span class="p">:</span><span class="s2">"testtr@amtruck.com"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<blockquote>
+<p>Login Otp Response Payload:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"We've sent you an OTP to your email"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>On a preffered client navigate to the Login Otp endpoint with url <a href="https://dev.api.amitruck.co/v2/auth/user/login/otp/">https://dev.api.amitruck.co/v2/auth/user/login/otp/</a>. The following are the request and response payload in JSON format. This endpoint require to be authenticated and the password of the authenticaded user will be updated.</p>
 
 <table><thead>
 <tr>
