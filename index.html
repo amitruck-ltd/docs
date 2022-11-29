@@ -437,28 +437,6 @@
 </tr>
 </tbody></table>
 <h1 id='authentication'>Authentication</h1><h2 id='user-registration'>User Registration</h2>
-<p>On a preffered client navigate to the Register request with url <a href="https://dev.api.amitruck.co/v2/auth/user/register/">https://dev.api.amitruck.co/v2/auth/user/register/</a>. The following are the request and response payload in JSON format.</p>
-
-<table><thead>
-<tr>
-<th>Item</th>
-<th>Value</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>METHOD</td>
-<td>POST</td>
-</tr>
-<tr>
-<td>URL</td>
-<td>https://dev.api.amitruck.co/v2/auth/user/register/</td>
-</tr>
-<tr>
-<td>HEADERS</td>
-<td>Content-Type: &quot;application/json&quot;</td>
-</tr>
-</tbody></table>
-
 <blockquote>
 <p>Registration Request Payload:</p>
 </blockquote>
@@ -488,8 +466,8 @@
         </span><span class="p">}</span><span class="w">
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h2 id='user-login'>User Login</h2>
-<p>On a preffered client navigate to the Login request with url <a href="https://dev.api.amitruck.co/v2/auth/user/login/">https://dev.api.amitruck.co/v2/auth/user/login/</a>. The following are the request and response payload in JSON format. This endpoint provides the Acccess token to be used to authenticate further requests.</p>
+</span></code></pre></div>
+<p>On a preffered client navigate to the Register request with url <a href="https://dev.api.amitruck.co/v2/auth/user/register/">https://dev.api.amitruck.co/v2/auth/user/register/</a>. The following are the request and response payload in JSON format.</p>
 
 <table><thead>
 <tr>
@@ -503,14 +481,14 @@
 </tr>
 <tr>
 <td>URL</td>
-<td>https://dev.api.amitruck.co/v2/auth/user/login/</td>
+<td>https://dev.api.amitruck.co/v2/auth/user/register/</td>
 </tr>
 <tr>
 <td>HEADERS</td>
 <td>Content-Type: &quot;application/json&quot;</td>
 </tr>
 </tbody></table>
-
+<h2 id='user-login'>User Login</h2>
 <blockquote>
 <p>Login Request Payload:</p>
 </blockquote>
@@ -536,7 +514,29 @@
     </span><span class="nl">"refresh_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4c"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"access_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcwMTM4Nz"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h2 id='change-password'>Change Password</h2>
+</span></code></pre></div>
+<p>On a preffered client navigate to the Login request with url <a href="https://dev.api.amitruck.co/v2/auth/user/login/">https://dev.api.amitruck.co/v2/auth/user/login/</a>. The following are the request and response payload in JSON format. This endpoint provides the Acccess token to be used to authenticate further requests.</p>
+
+<table><thead>
+<tr>
+<th>Item</th>
+<th>Value</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>METHOD</td>
+<td>POST</td>
+</tr>
+<tr>
+<td>URL</td>
+<td>https://dev.api.amitruck.co/v2/auth/user/login/</td>
+</tr>
+<tr>
+<td>HEADERS</td>
+<td>Content-Type: &quot;application/json&quot;</td>
+</tr>
+</tbody></table>
+<h2 id='change-password'>Change Password</h2>
 <p>On a preffered client navigate to the Login request with url <a href="https://dev.api.amitruck.co/v2/auth/user/change-password/">https://dev.api.amitruck.co/v2/auth/user/change-password/</a>. The following are the request and response payload in JSON format. This endpoint require to be authenticated and the password of the authenticaded user will be updated.</p>
 
 <table><thead>
