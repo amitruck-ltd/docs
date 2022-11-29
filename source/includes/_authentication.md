@@ -1,4 +1,8 @@
 # Authentication
+
+
+## User Registration
+On a preffered client navigate to the Register request with url [https://dev.api.amitruck.co/v2/auth/user/register/](https://dev.api.amitruck.co/v2/auth/user/register/). The following are the request and response payload in JSON format.
 > Registration Request Payload:
 
 ```json
@@ -31,9 +35,8 @@
 }
 ```
 
-## User Registration
-On a preffered client navigate to the Register request with url [https://dev.api.amitruck.co/v2/auth/user/register/](https://dev.api.amitruck.co/v2/auth/user/register/). The following are the request and response payload in JSON format.
-
+## User Login
+On a preffered client navigate to the Login request with url [https://dev.api.amitruck.co/v2/auth/user/login/](https://dev.api.amitruck.co/v2/auth/user/login/). The following are the request and response payload in JSON format. This endpoint provides the Acccess token to be used to authenticate further requests.
 
 
 > Login Request Payload:
@@ -63,8 +66,7 @@ On a preffered client navigate to the Register request with url [https://dev.api
     ]
 }
 ```
-## User Login
-On a preffered client navigate to the Login request with url [https://dev.api.amitruck.co/v2/auth/user/login/](https://dev.api.amitruck.co/v2/auth/user/login/). The following are the request and response payload in JSON format. This endpoint provides the Acccess token to be used to authenticate further requests.
+
 
 
 ## Change Password
