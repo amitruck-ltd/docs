@@ -33,13 +33,5 @@
 ```
 With A valid Access token, we can use it to be able to access other API endpoints. We shall start by looking at the user register endpoint. On Post man navigate to the Register request with url [https://dev.api.amitruck.co/v2/auth/)user/register/](https://dev.api.amitruck.co/v2/auth/user/register/). The following are the request and response payload in JSON format.
 
-With A valid Access token, we can use it to be able to access other API endpoints. We shall start by looking at the user register endpoint. On Post man navigate to the Register request with url https://dev.api.amitruck.co/v2/auth/user/register/. The following are the request and response payload in JSON format.
-
-With A valid Access token, we can use it to be able to access other API endpoints. We shall start by looking at the user register endpoint. On Post man navigate to the Register request with url https://dev.api.amitruck.co/v2/auth/user/register/. The following are the request and response payload in JSON format.
-
-
-With A valid Access token, we can use it to be able to access other API endpoints. We shall start by looking at the user register endpoint. On Post man navigate to the Register request with url https://dev.api.amitruck.co/v2/auth/user/register/. The following are the request and response payload in JSON format.
-
-With A valid Access token, we can use it to be able to access other API endpoints. We shall start by looking at the user register endpoint. On Post man navigate to the Register request with url https://dev.api.amitruck.co/v2/auth/user/register/. The following are the request and response payload in JSON format.
 
 
