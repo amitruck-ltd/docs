@@ -1,5 +1,7 @@
 # Authentication
 
+Register
+
 > To authorize, use this code:
 
 ```json

@@ -1,5 +1,4 @@
 
 # Billing 
 
-
-Testing if it works
+This section cintains API documentatio for Billing information 
