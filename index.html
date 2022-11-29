@@ -416,16 +416,38 @@
 </tr>
 </tbody></table>
 <h1 id='authentication'>Authentication</h1>
-<p>Register</p>
+<p>With A valid Access token, we can use it to be able to access other API endpoints. We shall start by looking at the user register endpoint. On Post man navigate to the Register request with url https://dev.api.amitruck.co/v2/auth/user/register/. The following are the request and response payload in JSON format.</p>
 
 <blockquote>
-<p>To authorize, use this code:</p>
+<p>Registration Request Payload:</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"John Doe"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TestPassword3!"</span><span class="w">
+    </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test@amitruck.com"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"phone_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"254700500200"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"names"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Amitrurk User"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Test1234"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"password_confirm"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Test1234"</span><span class="w">
+
 </span><span class="p">}</span><span class="w">
 
+</span></code></pre></div>
+<blockquote>
+<p>Registration Response Payload:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Success"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">201</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Registration Successful"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"names"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Amitrurk User"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test@amitruck.com"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"phone_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"254700500200"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7f82a49e98030b4476858786a3f3ebac274b6ca4a87691e21696dfe15b6a1431"</span><span class="w">
+</span><span class="p">}</span><span class="w">
 </span></code></pre></div><h1 id='customers'>Customers</h1>
 <p>This section contains API related to customers such as customer&#39;s onboarding</p>
 <h1 id='transporters'>Transporters</h1>
