@@ -13,6 +13,18 @@
 
 ```
 
+```typescript
+{
+    "email": "test@amitruck.com",
+    "phone_number": "254700500200",
+    "names": "Amitrurk User",
+    "password": "Test1234",
+    "password_confirm": "Test1234"
+
+}
+
+```
+
 > Registration Response Payload:
 
 ```json
