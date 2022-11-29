@@ -16,7 +16,7 @@ includes:
   - transporters
   - drivers
   - vehicles
-    - vehicle-types
+  - vehicle-types
   - trips
   - attendance
   - billing
