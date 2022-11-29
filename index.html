@@ -467,7 +467,7 @@
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>
-<p>On a preffered client navigate to the Register request with url <a href="https://dev.api.amitruck.co/v2/auth/user/register/">https://dev.api.amitruck.co/v2/auth/user/register/</a>. The following are the request and response payload in JSON format.</p>
+<p>On a preffered client navigate to the Register endpoint with url <a href="https://dev.api.amitruck.co/v2/auth/user/register/">https://dev.api.amitruck.co/v2/auth/user/register/</a>. The following are the request and response payload in JSON format.</p>
 
 <table><thead>
 <tr>
@@ -515,7 +515,7 @@
     </span><span class="nl">"access_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcwMTM4Nz"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>
-<p>On a preffered client navigate to the Login request with url <a href="https://dev.api.amitruck.co/v2/auth/user/login/">https://dev.api.amitruck.co/v2/auth/user/login/</a>. The following are the request and response payload in JSON format. This endpoint provides the Acccess token to be used to authenticate further requests.</p>
+<p>On a preffered client navigate to the Login endpoint with url <a href="https://dev.api.amitruck.co/v2/auth/user/login/">https://dev.api.amitruck.co/v2/auth/user/login/</a>. The following are the request and response payload in JSON format. This endpoint provides the Acccess token to be used to authenticate further requests.</p>
 
 <table><thead>
 <tr>
@@ -538,7 +538,7 @@
 </tbody></table>
 <h2 id='change-password'>Change Password</h2>
 <blockquote>
-<p>Change Payload Request Payload:</p>
+<p>Change Password Request Payload:</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="nl">"old_password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Qazwsxedcrfv123!"</span><span class="p">,</span><span class="w">
@@ -546,7 +546,7 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>
 <blockquote>
-<p>Change Payload Response Payload:</p>
+<p>Change Password Response Payload:</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
@@ -555,7 +555,7 @@
     </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>
-<p>On a preffered client navigate to the Login request with url <a href="https://dev.api.amitruck.co/v2/auth/user/change-password/">https://dev.api.amitruck.co/v2/auth/user/change-password/</a>. The following are the request and response payload in JSON format. This endpoint require to be authenticated and the password of the authenticaded user will be updated.</p>
+<p>On a preffered client navigate to the Login endpoint with url <a href="https://dev.api.amitruck.co/v2/auth/user/change-password/">https://dev.api.amitruck.co/v2/auth/user/change-password/</a>. The following are the request and response payload in JSON format. This endpoint require to be authenticated and the password of the authenticaded user will be updated.</p>
 
 <table><thead>
 <tr>
@@ -581,7 +581,30 @@
 </tr>
 </tbody></table>
 <h2 id='invite-user'>Invite User</h2>
-<p>On a preffered client navigate to the Login request with url <a href="https://dev.api.amitruck.co/v2/auth/user/change-password/">https://dev.api.amitruck.co/v2/auth/user/change-password/</a>. The following are the request and response payload in JSON format. This endpoint require to be authenticated and the password of the authenticaded user will be updated.</p>
+<blockquote>
+<p>Invite User Request Payload:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">   </span><span class="nl">"names"</span><span class="p">:</span><span class="s2">"Kamaro Lambert"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"kamaro@amitruck.com"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<blockquote>
+<p>Invite User Response Payload:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Success"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">201</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Invitation Sent to User"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">38</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"names"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Kamaro Lambert"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"kamaro@amitruck.com"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>On a preffered client navigate to the Login endpoint with url <a href="https://dev.api.amitruck.co/v2/auth/user/user-invite/">https://dev.api.amitruck.co/v2/auth/user/user-invite/</a>. The following are the request and response payload in JSON format. This endpoint require to be authenticated and the password of the authenticaded user will be updated.</p>
 
 <table><thead>
 <tr>
@@ -595,7 +618,7 @@
 </tr>
 <tr>
 <td>URL</td>
-<td>https://dev.api.amitruck.co/v2/auth/user/change-password/</td>
+<td>https://dev.api.amitruck.co/v2/auth/user/user-invite/</td>
 </tr>
 <tr>
 <td>HEADERS</td>
@@ -607,7 +630,28 @@
 </tr>
 </tbody></table>
 <h2 id='get-all-users'>Get All Users</h2>
-<p>On a preffered client navigate to the Login request with url <a href="https://dev.api.amitruck.co/v2/auth/user/change-password/">https://dev.api.amitruck.co/v2/auth/user/change-password/</a>. The following are the request and response payload in JSON format. This endpoint require to be authenticated and the password of the authenticaded user will be updated.</p>
+<blockquote>
+<p>Invite User Request Payload:
+  none
+Invite User Response Payload:
+<code>json
+[
+    {
+        &quot;id&quot;: 1,
+        &quot;names&quot;: &quot;Amitruck Admin&quot;,
+        &quot;email&quot;: &quot;admin2@amitruck.com&quot;,
+        &quot;phone_number&quot;: &quot;07162352782&quot;
+    },
+    {
+        &quot;id&quot;: 34,
+        &quot;names&quot;: &quot;Amitruck Admin&quot;,
+        &quot;email&quot;: &quot;admin@admin.com&quot;,
+        &quot;phone_number&quot;: &quot;0757000000&quot;
+    }
+]
+</code>
+On a preffered client navigate to the get all users endpoint with url <a href="https://dev.api.amitruck.co/v2/auth/user/users/">https://dev.api.amitruck.co/v2/auth/user/users/</a>. The following are the request and response payload in JSON format.</p>
+</blockquote>
 
 <table><thead>
 <tr>
@@ -617,11 +661,11 @@
 </thead><tbody>
 <tr>
 <td>METHOD</td>
-<td>POST</td>
+<td>GET</td>
 </tr>
 <tr>
 <td>URL</td>
-<td>https://dev.api.amitruck.co/v2/auth/user/change-password/</td>
+<td>https://dev.api.amitruck.co/v2/auth/user/users/</td>
 </tr>
 <tr>
 <td>HEADERS</td>
@@ -633,7 +677,23 @@
 </tr>
 </tbody></table>
 <h2 id='login-otp'>Login Otp</h2>
-<p>On a preffered client navigate to the Login request with url <a href="https://dev.api.amitruck.co/v2/auth/user/change-password/">https://dev.api.amitruck.co/v2/auth/user/change-password/</a>. The following are the request and response payload in JSON format. This endpoint require to be authenticated and the password of the authenticaded user will be updated.</p>
+<blockquote>
+<p>Login Otp Response Payload:
+<code>json
+{ 
+    &quot;username&quot;:&quot;testtr@amtruck.com&quot;
+}
+</code>
+Login Otp Response Payload:
+<code>json
+{
+    &quot;status&quot;: &quot;success&quot;,
+    &quot;code&quot;: 200,
+    &quot;message&quot;: &quot;We&#39;ve sent you an OTP to your email&quot;
+}
+</code>
+On a preffered client navigate to the Login Otp endpoint with url <a href="https://dev.api.amitruck.co/v2/auth/user/login/otp/">https://dev.api.amitruck.co/v2/auth/user/login/otp/</a>. The following are the request and response payload in JSON format. This endpoint require to be authenticated and the password of the authenticaded user will be updated.</p>
+</blockquote>
 
 <table><thead>
 <tr>
@@ -647,7 +707,7 @@
 </tr>
 <tr>
 <td>URL</td>
-<td>https://dev.api.amitruck.co/v2/auth/user/change-password.</td>
+<td>https://dev.api.amitruck.co/v2/auth/user/login/otp/</td>
 </tr>
 <tr>
 <td>HEADERS</td>
