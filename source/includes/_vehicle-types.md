@@ -5,7 +5,7 @@
 ```json
 {
   "name": "Truck",
-  "description:"Vehicle that are trucks"
+  "description":"Vehicle that are trucks"
 }
 ```
 
