@@ -1,6 +1,7 @@
 # Vehicle Types Service
 
 > Sample payload:
+
 ```json
 {
   "name": "Truck",
