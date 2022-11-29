@@ -3,11 +3,13 @@
 
 ## User Registration
 On a preffered client navigate to the Register request with url [https://dev.api.amitruck.co/v2/auth/user/register/](https://dev.api.amitruck.co/v2/auth/user/register/). The following are the request and response payload in JSON format.
+
 Item | Value
 ---------- | -------
 METHOD | POST 
 URL | https://dev.api.amitruck.co/v2/auth/user/register/
 HEADERS | Content-Type: "application/json"
+
 > Registration Request Payload:
 
 ```json
@@ -42,6 +44,7 @@ HEADERS | Content-Type: "application/json"
 
 ## User Login
 On a preffered client navigate to the Login request with url [https://dev.api.amitruck.co/v2/auth/user/login/](https://dev.api.amitruck.co/v2/auth/user/login/). The following are the request and response payload in JSON format. This endpoint provides the Acccess token to be used to authenticate further requests.
+
 Item | Value
 ---------- | -------
 METHOD | POST 
@@ -84,7 +87,7 @@ Item | Value
 METHOD | POST 
 URL | https://dev.api.amitruck.co/v2/auth/user/change-password/
 HEADERS | Content-Type: "application/json"
-AUTHORIZATION| Bearer Token
+AUTHORIZATION | Bearer Token
 
 > Change Payload Request Payload:
 
@@ -113,7 +116,7 @@ Item | Value
 METHOD | POST 
 URL | https://dev.api.amitruck.co/v2/auth/user/change-password/
 HEADERS | Content-Type: "application/json"
-AUTHORIZATION| Bearer Token
+AUTHORIZATION | Bearer Token
 
 ## Get All Users
 On a preffered client navigate to the Login request with url [https://dev.api.amitruck.co/v2/auth/user/change-password/](https://dev.api.amitruck.co/v2/auth/user/change-password/). The following are the request and response payload in JSON format. This endpoint require to be authenticated and the password of the authenticaded user will be updated.
@@ -123,7 +126,7 @@ Item | Value
 METHOD | POST 
 URL | https://dev.api.amitruck.co/v2/auth/user/change-password/
 HEADERS | Content-Type: "application/json"
-AUTHORIZATION| Bearer Token
+AUTHORIZATION | Bearer Token
 
 ## Login Otp
 On a preffered client navigate to the Login request with url [https://dev.api.amitruck.co/v2/auth/user/change-password/](https://dev.api.amitruck.co/v2/auth/user/change-password/). The following are the request and response payload in JSON format. This endpoint require to be authenticated and the password of the authenticaded user will be updated.
@@ -133,7 +136,7 @@ Item | Value
 METHOD | POST 
 URL | https://dev.api.amitruck.co/v2/auth/user/change-password.
 HEADERS | Content-Type: "application/json"
-AUTHORIZATION| Bearer Token
+AUTHORIZATION | Bearer Token
 
 
 
