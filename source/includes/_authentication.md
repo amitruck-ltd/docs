@@ -149,8 +149,10 @@ AUTHORIZATION | Bearer Token
 
 ## Get All Users
 > Invite User Request Payload:
+
   none
 > Invite User Response Payload:
+
 ```json
 [
     {
@@ -178,12 +180,14 @@ AUTHORIZATION | Bearer Token
 
 ## Login Otp
 > Login Otp Response Payload:
+
 ```json
 { 
     "username":"testtr@amtruck.com"
 }
 ```
 > Login Otp Response Payload:
+
 ```json
 {
     "status": "success",
