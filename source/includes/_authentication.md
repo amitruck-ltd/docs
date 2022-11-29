@@ -138,7 +138,7 @@ AUTHORIZATION | Bearer Token
 }
 ```
 
-On a preffered client navigate to the Login endpoint with url [https://dev.api.amitruck.co/v2/auth/user/user-invite/](https://dev.api.amitruck.co/v2/auth/user/user-invite/). The following are the request and response payload in JSON format. This endpoint require to be authenticated and the password of the authenticaded user will be updated.
+On a preffered client navigate to the Invite User endpoint with url [https://dev.api.amitruck.co/v2/auth/user/user-invite/](https://dev.api.amitruck.co/v2/auth/user/user-invite/). The following are the request and response payload in JSON format. This endpoint require to be authenticated and an invite will be sent to the user.
 
 Item | Value
 ---------- | -------
@@ -198,7 +198,7 @@ AUTHORIZATION | Bearer Token
     "message": "We've sent you an OTP to your email"
 }
 ```
-On a preffered client navigate to the Login Otp endpoint with url [https://dev.api.amitruck.co/v2/auth/user/login/otp/](https://dev.api.amitruck.co/v2/auth/user/login/otp/). The following are the request and response payload in JSON format. This endpoint require to be authenticated and the password of the authenticaded user will be updated.
+On a preffered client navigate to the Login Otp endpoint with url [https://dev.api.amitruck.co/v2/auth/user/login/otp/](https://dev.api.amitruck.co/v2/auth/user/login/otp/). The following are the request and response payload in JSON format. This request if successful will send an OTP to the user and will be used for authentication.
 
 Item | Value
 ---------- | -------
