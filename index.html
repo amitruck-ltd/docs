@@ -321,6 +321,29 @@
           </li>
           <li>
             <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#user-registration" class="toc-h2 toc-link" data-title="User Registration">User Registration</a>
+                  </li>
+                  <li>
+                    <a href="#user-login" class="toc-h2 toc-link" data-title="User Login">User Login</a>
+                  </li>
+                  <li>
+                    <a href="#change-password" class="toc-h2 toc-link" data-title="Change Password">Change Password</a>
+                  </li>
+                  <li>
+                    <a href="#invite-user" class="toc-h2 toc-link" data-title="Invite User">Invite User</a>
+                  </li>
+                  <li>
+                    <a href="#get-all-users" class="toc-h2 toc-link" data-title="Get All Users">Get All Users</a>
+                  </li>
+                  <li>
+                    <a href="#login-otp" class="toc-h2 toc-link" data-title="Login Otp">Login Otp</a>
+                  </li>
+                  <li>
+                    <a href="#user-registration-2" class="toc-h2 toc-link" data-title="User Registration">User Registration</a>
+                  </li>
+              </ul>
           </li>
           <li>
             <a href="#customers" class="toc-h1 toc-link" data-title="Customers">Customers</a>
@@ -421,24 +444,15 @@
 <p>Registration Request Payload:</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test@amitruck.com"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"phone_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"254700500200"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"names"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Amitrurk User"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Test1234"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"password_confirm"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Test1234"</span><span class="w">
+    </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"testuser@amtruck.com"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"phone_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+25470052355"</span><span class="p">,</span><span class="w"> 
+    </span><span class="nl">"names"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Test User"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Qazwsxedcrfv123!"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"password_confirm"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Qazwsxedcrfv123!"</span><span class="w">
 
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><div class="highlight"><pre class="highlight typescript tab-typescript"><code><span class="p">{</span>
-    <span class="dl">"</span><span class="s2">email</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">test@amitruck.com</span><span class="dl">"</span><span class="p">,</span>
-    <span class="dl">"</span><span class="s2">phone_number</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">254700500200</span><span class="dl">"</span><span class="p">,</span>
-    <span class="dl">"</span><span class="s2">names</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Amitrurk User</span><span class="dl">"</span><span class="p">,</span>
-    <span class="dl">"</span><span class="s2">password</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Test1234</span><span class="dl">"</span><span class="p">,</span>
-    <span class="dl">"</span><span class="s2">password_confirm</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Test1234</span><span class="dl">"</span>
-
-<span class="p">}</span>
-
-</code></pre></div>
+</span></code></pre></div>
 <blockquote>
 <p>Registration Response Payload:</p>
 </blockquote>
@@ -448,17 +462,44 @@
     </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Registration Successful"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
         </span><span class="p">{</span><span class="w">
-            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"names"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Amitrurk User"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test@amitruck.com"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"phone_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"254700500200"</span><span class="w">
+            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">37</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"names"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Test User"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"testuser@amtruck.com"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"phone_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+25470052355"</span><span class="w">
         </span><span class="p">}</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="nl">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7f82a49e98030b4476858786a3f3ebac274b6ca4a87691e21696dfe15b6a1431"</span><span class="w">
+    </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
+</span></code></pre></div><h2 id='user-registration'>User Registration</h2>
+<p>On a preffered client navigate to the Register request with url <a href="https://dev.api.amitruck.co/v2/auth/user/register/">https://dev.api.amitruck.co/v2/auth/user/register/</a>. The following are the request and response payload in JSON format.</p>
+
+<blockquote>
+<p>Login Request Payload:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w"> 
+    </span><span class="nl">"email"</span><span class="p">:</span><span class="s2">"testtr@amtruck.com"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Qazwsxedcrfv123!"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
 </span></code></pre></div>
-<p>With A valid Access token, we can use it to be able to access other API endpoints. We shall start by looking at the user register endpoint. On Post man navigate to the Register request with url <a href="https://dev.api.amitruck.co/v2/auth/user/register/">https://dev.api.amitruck.co/v2/auth/)user/register/</a>. The following are the request and response payload in JSON format.</p>
-<h1 id='customers'>Customers</h1>
+<blockquote>
+<p>Login Response Payload:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Success"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">201</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Registration Successful"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">37</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"names"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Test User"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"testuser@amtruck.com"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"phone_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+25470052355"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><h2 id='user-login'>User Login</h2>
+<p>On a preffered client navigate to the Login request with url <a href="https://dev.api.amitruck.co/v2/auth/user/login/">https://dev.api.amitruck.co/v2/auth/user/login/</a>. The following are the request and response payload in JSON format. This endpoint provides the Acccess token to be used to authenticate further requests.</p>
+<h2 id='change-password'>Change Password</h2><h2 id='invite-user'>Invite User</h2><h2 id='get-all-users'>Get All Users</h2><h2 id='login-otp'>Login Otp</h2><h2 id='user-registration-2'>User Registration</h2><h1 id='customers'>Customers</h1>
 <p>This section contains API related to customers such as customer&#39;s onboarding</p>
 <h1 id='transporters'>Transporters</h1>
 <p>This section contains API documentation related to transporters such as transporter&#39;s onboarding</p>
