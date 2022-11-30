@@ -1,5 +1,5 @@
 ---
-title: API Reference
+title: Amitruck 2.0 - API Reference
 
 language_tabs: # must be one of https://git.io/vQNgJ
   - json
@@ -28,5 +28,5 @@ code_clipboard: true
 
 meta:
   - name: description
-    content: Documentation for the Kittn API
+    content: Documentation for the Amitruck 2.0 API
 ---
