@@ -783,14 +783,6 @@ These types are listed on during the vehicle registration page and the vehicle s
 </tr>
 </tbody></table>
 <h3 id='create-a-vehicle-type'>Create a Vehicle Type</h3>
-<p>This API is used to add new vehicle types to the Amitruck 2.0 platform. </p>
-
-<ul>
-<li>URL: <code>v2/vehicles/create</code></li>
-<li>Http Method: <code>POST</code></li>
-<li>Content-Type: <code>application/json</code></li>
-</ul>
-
 <blockquote>
 <p>Create a vehicle type request:</p>
 </blockquote>
@@ -817,7 +809,50 @@ These types are listed on during the vehicle registration page and the vehicle s
         </span><span class="p">}</span><span class="w">
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h1 id='trips-and-orders'>Trips and Orders</h1>
+</span></code></pre></div>
+<p>This API is used to add new vehicle types to the Amitruck 2.0 platform. </p>
+
+<ul>
+<li>URL: <code>v2/vehicle-types/create</code></li>
+<li>Http Method: <code>POST</code></li>
+<li>Content-Type: <code>application/json</code></li>
+</ul>
+<h3 id='list-vehicle-types'>List Vehicle Types</h3>
+<blockquote>
+<p>Request: https://api.amitruck.co/v2/vehicle-types</p>
+
+<p>Response:
+<code>json
+{
+    &quot;code&quot;: 200,
+    &quot;status&quot;: &quot;success&quot;,
+    &quot;message&quot;: &quot;Vehicle types retrieved successfully&quot;,
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: 1,
+            &quot;name&quot;: &quot;Gary Schneider&quot;,
+            &quot;description&quot;: &quot;Represent kitchen I water present&quot;,
+            &quot;created_at&quot;: &quot;2022-12-01T08:24:32.605194Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-12-01T08:24:32.605194Z&quot;,
+            &quot;deleted_at&quot;: null
+        },
+        {
+            &quot;id&quot;: 2,
+            &quot;name&quot;: &quot;Erica Rose&quot;,
+            &quot;description&quot;: &quot;Police number focus foot test.&quot;,
+            &quot;created_at&quot;: &quot;2022-12-01T08:24:32.605194Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-12-01T08:24:32.605194Z&quot;,
+            &quot;deleted_at&quot;: null
+        }
+    ]
+}
+</code></p>
+</blockquote>
+
+<p>This API returns a collection of all Amitruck 2.0 vehicle types.
+* URL: <code>v2/vehicle-types</code>
+* Http Method: <code>GET</code></p>
+<h1 id='trips-and-orders'>Trips and Orders</h1>
 <p>This section cintains API documentatio for trips </p>
 <h1 id='attendances'>Attendances</h1><h1 id='billing'>Billing</h1>
 <p>This section cintains API documentatio for Billing information </p>
