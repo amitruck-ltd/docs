@@ -57,6 +57,7 @@ This API is used to add new vehicle types to the Amitruck 2.0 platform.
 > Request: https://api.amitruck.co/v2/vehicle-types
 
 > Response:
+
 ```json
 {
     "code": 200,
