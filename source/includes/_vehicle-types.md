@@ -16,11 +16,6 @@ This service requires authentication.
 | deleted_at | date-time | Date time vehicle type was deleted at |
 
 ### Create a Vehicle Type
-This API is used to add new vehicle types to the Amitruck 2.0 platform. 
-
-* URL: `v2/vehicles/create`
-* Http Method: `POST`
-* Content-Type: `application/json`
 
 > Create a vehicle type request:
 
@@ -50,3 +45,46 @@ This API is used to add new vehicle types to the Amitruck 2.0 platform.
     ]
 }
 ```
+
+This API is used to add new vehicle types to the Amitruck 2.0 platform. 
+
+* URL: `v2/vehicle-types/create`
+* Http Method: `POST`
+* Content-Type: `application/json`
+
+### List Vehicle Types
+
+> Request: https://api.amitruck.co/v2/vehicle-types
+
+> Response:
+```json
+{
+    "code": 200,
+    "status": "success",
+    "message": "Vehicle types retrieved successfully",
+    "data": [
+        {
+            "id": 1,
+            "name": "Gary Schneider",
+            "description": "Represent kitchen I water present",
+            "created_at": "2022-12-01T08:24:32.605194Z",
+            "updated_at": "2022-12-01T08:24:32.605194Z",
+            "deleted_at": null
+        },
+        {
+            "id": 2,
+            "name": "Erica Rose",
+            "description": "Police number focus foot test.",
+            "created_at": "2022-12-01T08:24:32.605194Z",
+            "updated_at": "2022-12-01T08:24:32.605194Z",
+            "deleted_at": null
+        }
+    ]
+}
+```
+
+This API returns a collection of all Amitruck 2.0 vehicle types.
+* URL: `v2/vehicle-types`
+* Http Method: `GET`
+
+
