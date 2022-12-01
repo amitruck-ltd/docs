@@ -744,14 +744,44 @@ These types are listed on during the vehicle registration page and the vehicle s
 
 <p>This service requires authentication.</p>
 <h3 id='vehicle-type-properties'>Vehicle Type Properties</h3>
-<p>| Attribute | Type | Description |
-| ----------- | ----------- |
-| id  | Integer | Unique identifier of the resource <code>readonly</code> |
-| name | string | Vehicle type name |
-| description | string | Vehicle type description |
-| created_at | date-time | Vehicle type created at |
-| updated_at | date-time | Vehicle type updated at |
-| deleted_at | date-time | Vehicle type deleted at |</p>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Integer</td>
+<td>Unique identifier of the resource <code>readonly</code></td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>Vehicle type name</td>
+</tr>
+<tr>
+<td>description</td>
+<td>string</td>
+<td>Vehicle type description</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>date-time</td>
+<td>Date time vehicle type was created at <code>readonly</code></td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>date-time</td>
+<td>Date time vehicle type was updated at <code>readonly</code></td>
+</tr>
+<tr>
+<td>deleted_at</td>
+<td>date-time</td>
+<td>Date time vehicle type was deleted at</td>
+</tr>
+</tbody></table>
 <h3 id='create-a-vehicle-type'>Create a Vehicle Type</h3>
 <p>This API is used to add new vehicle types to the Amitruck 2.0 platform. </p>
 
