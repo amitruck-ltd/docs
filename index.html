@@ -740,7 +740,7 @@
 <p>This section contains API documentation for vehicles</p>
 <h2 id='vehicle-types'>Vehicle Types</h2>
 <blockquote>
-<p>Create a vehicle type request:</p>
+<p>CREATE REQUEST</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Vehicle Type Name"</span><span class="p">,</span><span class="w">
@@ -748,7 +748,7 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>
 <blockquote>
-<p>Create a Vehicle Type Response</p>
+<p>CREATE RESPONSE</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">201</span><span class="p">,</span><span class="w">
@@ -767,9 +767,9 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>
 <blockquote>
-<p>List Vehicle Type Request: <code>https://api.amitruck.co/v2/vehicle-types</code></p>
+<p>LIST REQUEST: <code>https://api.amitruck.co/v2/vehicle-types</code></p>
 
-<p>List Vehicle Type Response:</p>
+<p>LIST RESPONSE</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
@@ -796,9 +796,10 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>
 <blockquote>
-<p>Retrieve A Vehicle Type Request:  GET <code>https://api.amitruck.co/v2/vehicle-types/1</code></p>
+<p>RETRIEVE REQUEST<br>
+GET <code>https://api.amitruck.co/v2/vehicle-types/1</code></p>
 
-<p>Retrieve A Vehicle Type Response</p>
+<p>RETRIEVE RESPONSE</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
@@ -817,7 +818,7 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>
 <blockquote>
-<p>Update an Existing Vehicle Type Request</p>
+<p>UPDATE REQUEST</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Name Updated"</span><span class="p">,</span><span class="w">
@@ -825,7 +826,7 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>
 <blockquote>
-<p>Update Response</p>
+<p>UPDATE RESPONSE</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
@@ -844,14 +845,14 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>
 <blockquote>
-<p>Delete a Vehicle Type Request</p>
+<p>DELETE REQUEST</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>
 <blockquote>
-<p>Delete a Vehicle Type Response</p>
+<p>DELETE RESPONSE</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
@@ -863,7 +864,7 @@
 These types are listed on during the vehicle registration page and the vehicle services depend on it. </p>
 
 <p>This service requires authentication.</p>
-<h3 id='vehicle-type-properties'>Vehicle Type Properties</h3>
+<h3 id='vehicle-type-properties'>VEHICLE TYPE PROPERTIES</h3>
 <table><thead>
 <tr>
 <th>Attribute</th>
@@ -902,7 +903,7 @@ These types are listed on during the vehicle registration page and the vehicle s
 <td>Date time vehicle type was deleted at</td>
 </tr>
 </tbody></table>
-<h3 id='create-a-vehicle-type'>Create a Vehicle Type</h3>
+<h3 id='create-a-vehicle-type'>CREATE A VEHICLE TYPE</h3>
 <p>This API is used to add new vehicle types to the Amitruck 2.0 platform. </p>
 
 <ul>
@@ -910,19 +911,37 @@ These types are listed on during the vehicle registration page and the vehicle s
 <li>Http Method: <code>POST</code></li>
 <li>Content-Type: <code>application/json</code></li>
 </ul>
-<h3 id='list-vehicle-types'>List Vehicle Types</h3>
+<h3 id='list-a-vehicle-type'>LIST A VEHICLE TYPE</h3>
 <p>This API returns a collection of all Amitruck 2.0 vehicle types.</p>
 
 <ul>
 <li>URL: <code>v2/vehicle-types</code></li>
 <li>Http Method: <code>GET</code></li>
 </ul>
-<h3 id='retrieve-a-vehicle-type'>Retrieve a Vehicle Type</h3>
-<p>This endpoint retrieves details of an existing vehicle type. You have to pass the <code>ID</code> of the vehicle type.</p>
+<h3 id='retrieve-a-vehicle-type'>RETRIEVE A VEHICLE TYPE</h3>
+<p>This endpoint retrieves details of an existing vehicle type. You have to pass the <code>ID</code> of the vehicle type. It returns error 404(not found) if the vehicle type to be retrieved does not existing in the Amitruck 2.0 database.</p>
 
 <ul>
 <li>URL: <code>v2/vehicle-types/{ID}</code></li>
 <li>Http Method: <code>GET</code></li>
+</ul>
+<h3 id='update-a-vehicle-type'>UPDATE A VEHICLE TYPE</h3>
+<p>This endpoint updates an existing vehicle type. It returns error 404 when the vehicle type to be updated does not exist.</p>
+
+<ul>
+<li>URL: <code>v2/vehicle-types/{vehicle-type-ID}/update</code></li>
+<li>Http Method: <code>PUT</code></li>
+<li>Content-Type: <code>application/json</code></li>
+</ul>
+<h3 id='delete-a-vehicle-type'>DELETE A VEHICLE TYPE</h3>
+<p>This endpoint DELETES an existing vehicle type in a software way. It does not erase it from the database, instead it updates the <code>deleted_at</code> field with the current time stamp so that this field will be considered deleted, but can be restored when needed. </p>
+
+<p>The API to restore a deleted field will be released in the future version of this API.</p>
+
+<ul>
+<li>URL: <code>v2/vehicle-types/{vehicle-type-ID}/delete</code></li>
+<li>Http Method: <code>DELETE</code></li>
+<li>Content-Type: <code>application/json</code></li>
 </ul>
 <h1 id='trips-and-orders'>Trips and Orders</h1>
 <p>This section cintains API documentatio for trips </p>
