@@ -352,9 +352,11 @@
           </li>
           <li>
             <a href="#vehicles" class="toc-h1 toc-link" data-title="Vehicles">Vehicles</a>
-          </li>
-          <li>
-            <a href="#vehicle-types-service" class="toc-h1 toc-link" data-title="Vehicle Types Service">Vehicle Types Service</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#vehicle-types" class="toc-h2 toc-link" data-title="Vehicle Types">Vehicle Types</a>
+                  </li>
+              </ul>
           </li>
           <li>
             <a href="#trips-and-orders" class="toc-h1 toc-link" data-title="Trips and Orders">Trips and Orders</a>
@@ -736,20 +738,47 @@
 <p>This section contains API documentation for drivers</p>
 <h1 id='vehicles'>Vehicles</h1>
 <p>This section contains API documentation for vehicles</p>
-<h1 id='vehicle-types-service'>Vehicle Types Service</h1>
+<h2 id='vehicle-types'>Vehicle Types</h2>
+<p>The vehicle types service allows you to add a new vehicle type in terms of the Trucks, Tuktuk, Bikes, Van or any other vehicle types.
+These types are listed on during the vehicle registration page and the vehicle services depend on it. </p>
+
+<p>This service requires authentication.</p>
+<h3 id='create-a-vehicle-type'>Create a Vehicle Type</h3>
+<p>This API is used to add new vehicle types to the Amitruck 2.0 platform. </p>
+
+<ul>
+<li>URL: <code>v2/vehicles/create</code></li>
+<li>Http Method: <code>POST</code></li>
+<li>Content-Type: <code>application/json</code></li>
+</ul>
+
 <blockquote>
-<p>Sample payload:</p>
+<p>Create a vehicle type request:</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Truck"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"description"</span><span class="p">:</span><span class="s2">"Vehicle that are trucks"</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Vehicle Type Name"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Vehicle Type Description"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>
-<p>The vehicle types service allows you to add a new vehicle type in terms of the Trucks, Tuktuk, Bikes, Van or any other vehicle types.
-These types are listed on during the vehicle registration page. </p>
-
-<p>This service requires the API client to be authenticated. </p>
-<h1 id='trips-and-orders'>Trips and Orders</h1>
+<blockquote>
+<p>Response</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">201</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Truck vehicle type was added"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Truck"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Vehicle that can transport 5T"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-12-01T08: 12: 22.049585Z"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-12-01T08: 12: 22.049585Z"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"deleted_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><h1 id='trips-and-orders'>Trips and Orders</h1>
 <p>This section cintains API documentatio for trips </p>
 <h1 id='attendances'>Attendances</h1><h1 id='billing'>Billing</h1>
 <p>This section cintains API documentatio for Billing information </p>
