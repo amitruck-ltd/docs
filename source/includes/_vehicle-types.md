@@ -131,7 +131,7 @@ These types are listed on during the vehicle registration page and the vehicle s
 
 This service requires authentication.
 
-### VEHICLE TYPE PROPERTIES
+#### VEHICLE TYPE PROPERTIES
 
 | Attribute | Type | Description |
 | -----------|---------| ----------- |
