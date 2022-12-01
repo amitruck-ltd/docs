@@ -1,15 +1,41 @@
-# Vehicle Types Service
+## Vehicle Types
+The vehicle types service allows you to add a new vehicle type in terms of the Trucks, Tuktuk, Bikes, Van or any other vehicle types.
+These types are listed on during the vehicle registration page and the vehicle services depend on it. 
 
-> Sample payload:
+This service requires authentication.
+
+### Create a Vehicle Type
+This API is used to add new vehicle types to the Amitruck 2.0 platform. 
+
+* URL: `v2/vehicles/create`
+* Http Method: `POST`
+* Content-Type: `application/json`
+
+> Create a vehicle type request:
 
 ```json
 {
-  "name": "Truck",
-  "description":"Vehicle that are trucks"
+    "name": "Vehicle Type Name",
+    "description": "Vehicle Type Description"
 }
 ```
 
-The vehicle types service allows you to add a new vehicle type in terms of the Trucks, Tuktuk, Bikes, Van or any other vehicle types.
-These types are listed on during the vehicle registration page. 
+> Response
 
-This service requires the API client to be authenticated. 
+```json
+{
+    "code": 201,
+    "status": "success",
+    "message": "Truck vehicle type was added",
+    "data": [
+        {
+            "id": 1,
+            "name": "Truck",
+            "description": "Vehicle that can transport 5T",
+            "created_at": "2022-12-01T08: 12: 22.049585Z",
+            "updated_at": "2022-12-01T08: 12: 22.049585Z",
+            "deleted_at": null
+        }
+    ]
+}
+```
