@@ -7,13 +7,13 @@ This service requires authentication.
 ### Vehicle Type Properties
 
 | Attribute | Type | Description |
-| ----------- | ----------- |
+| -----------|---------| ----------- |
 | id  | Integer | Unique identifier of the resource `readonly` |
 | name | string | Vehicle type name |
 | description | string | Vehicle type description |
-| created_at | date-time | Vehicle type created at |
-| updated_at | date-time | Vehicle type updated at |
-| deleted_at | date-time | Vehicle type deleted at |
+| created_at | date-time | Date time vehicle type was created at `readonly` |
+| updated_at | date-time | Date time vehicle type was updated at `readonly` |
+| deleted_at | date-time | Date time vehicle type was deleted at |
 
 ### Create a Vehicle Type
 This API is used to add new vehicle types to the Amitruck 2.0 platform. 
