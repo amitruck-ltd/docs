@@ -1,7 +1,6 @@
 ## Vehicle Types
 
-
-> Create a vehicle type request:
+> CREATE REQUEST
 
 ```json
 {
@@ -10,7 +9,7 @@
 }
 ```
 
-> Create a Vehicle Type Response
+> CREATE RESPONSE
 
 ```json
 {
@@ -29,9 +28,9 @@
     ]
 }
 ```
-> List Vehicle Type Request: `https://api.amitruck.co/v2/vehicle-types`
+> LIST REQUEST: `https://api.amitruck.co/v2/vehicle-types`
 
-> List Vehicle Type Response:
+> LIST RESPONSE
 
 ```json
 {
@@ -58,9 +57,10 @@
     ]
 }
 ```
-> Retrieve A Vehicle Type Request:  GET `https://api.amitruck.co/v2/vehicle-types/1`
+> RETRIEVE REQUEST  
+> GET `https://api.amitruck.co/v2/vehicle-types/1`
 
-> Retrieve A Vehicle Type Response
+> RETRIEVE RESPONSE
 
 ```json
 {
@@ -80,7 +80,7 @@
 }
 ```
 
-> Update an Existing Vehicle Type Request
+> UPDATE REQUEST
 
 ```json
 {
@@ -89,7 +89,7 @@
 }
 ```
 
->  Update Response
+>  UPDATE RESPONSE
 
 ```json 
 {
@@ -109,7 +109,7 @@
 }
 ```
 
-> Delete a Vehicle Type Request
+> DELETE REQUEST
 
 ```json 
 {
@@ -117,7 +117,7 @@
 }
 ```
 
-> Delete a Vehicle Type Response
+> DELETE RESPONSE
 
 ```json
 {
@@ -132,7 +132,7 @@ These types are listed on during the vehicle registration page and the vehicle s
 
 This service requires authentication.
 
-### Vehicle Type Properties
+### VEHICLE TYPE PROPERTIES
 
 | Attribute | Type | Description |
 | -----------|---------| ----------- |
@@ -143,7 +143,7 @@ This service requires authentication.
 | updated_at | date-time | Date time vehicle type was updated at `readonly` |
 | deleted_at | date-time | Date time vehicle type was deleted at |
 
-### Create a Vehicle Type
+### CREATE A VEHICLE TYPE
 
 This API is used to add new vehicle types to the Amitruck 2.0 platform. 
 
@@ -151,17 +151,34 @@ This API is used to add new vehicle types to the Amitruck 2.0 platform.
 * Http Method: `POST`
 * Content-Type: `application/json`
 
-### List Vehicle Types
+### LIST A VEHICLE TYPE
 
 This API returns a collection of all Amitruck 2.0 vehicle types.
 
 * URL: `v2/vehicle-types`
 * Http Method: `GET`
 
-### Retrieve a Vehicle Type
+### RETRIEVE A VEHICLE TYPE
 
-This endpoint retrieves details of an existing vehicle type. You have to pass the `ID` of the vehicle type.
+This endpoint retrieves details of an existing vehicle type. You have to pass the `ID` of the vehicle type. It returns error 404(not found) if the vehicle type to be retrieved does not existing in the Amitruck 2.0 database.
 
 * URL: `v2/vehicle-types/{ID}`
 * Http Method: `GET`
 
+### UPDATE A VEHICLE TYPE
+
+This endpoint updates an existing vehicle type. It returns error 404 when the vehicle type to be updated does not exist.
+
+* URL: `v2/vehicle-types/{vehicle-type-ID}/update`
+* Http Method: `PUT`
+* Content-Type: `application/json`
+
+### DELETE A VEHICLE TYPE
+
+This endpoint DELETES an existing vehicle type in a software way. It does not erase it from the database, instead it updates the `deleted_at` field with the current time stamp so that this field will be considered deleted, but can be restored when needed. 
+
+The API to restore a deleted field will be released in the future version of this API.
+
+* URL: `v2/vehicle-types/{vehicle-type-ID}/delete`
+* Http Method: `DELETE`
+* Content-Type: `application/json`
