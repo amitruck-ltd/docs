@@ -58,6 +58,74 @@
     ]
 }
 ```
+> Retrieve A Vehicle Type Request:  GET `https://api.amitruck.co/v2/vehicle-types/1`
+
+> Retrieve A Vehicle Type Response
+
+```json
+{
+    "code": 200,
+    "status": "success",
+    "message": "Truck vehicle type was added",
+    "data": [
+        {
+            "id": 1,
+            "name": "Truck",
+            "description": "Vehicle that can transport 5T",
+            "created_at": "2022-12-01T08: 12: 22.049585Z",
+            "updated_at": "2022-12-01T08: 12: 22.049585Z",
+            "deleted_at": null
+        }
+    ]
+}
+```
+
+> Update an Existing Vehicle Type Request
+
+```json
+{
+    "name": "Name Updated",
+    "description": "Description Updated"
+}
+```
+
+>  Update Response
+
+```json 
+{
+    "code": 200,
+    "status": "success",
+    "message": "Vehicle Type successfully updated",
+    "data": [
+        {
+            "id": 42,
+            "name": "Name Updated.",
+            "description": "Description Updated",
+            "created_at": "2022-12-01T08:28:14.683819Z",
+            "updated_at": "2022-12-01T08:28:14.687819Z",
+            "deleted_at": null
+        }
+    ]
+}
+```
+
+> Delete a Vehicle Type Request
+
+```json 
+{
+    "id": 1
+}
+```
+
+> Delete a Vehicle Type Response
+
+```json
+{
+    "code": 200,
+    "status": "success",
+    "message": "Vehicle Type delete successful."
+}
+```
 
 The vehicle types service allows you to add a new vehicle type in terms of the Trucks, Tuktuk, Bikes, Van or any other vehicle types.
 These types are listed on during the vehicle registration page and the vehicle services depend on it. 
@@ -90,4 +158,10 @@ This API returns a collection of all Amitruck 2.0 vehicle types.
 * URL: `v2/vehicle-types`
 * Http Method: `GET`
 
+### Retrieve a Vehicle Type
+
+This endpoint retrieves details of an existing vehicle type. You have to pass the `ID` of the vehicle type.
+
+* URL: `v2/vehicle-types/{ID}`
+* Http Method: `GET`
 
