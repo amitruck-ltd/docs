@@ -1,21 +1,5 @@
 ## Vehicle Types
-The vehicle types service allows you to add a new vehicle type in terms of the Trucks, Tuktuk, Bikes, Van or any other vehicle types.
-These types are listed on during the vehicle registration page and the vehicle services depend on it. 
 
-This service requires authentication.
-
-### Vehicle Type Properties
-
-| Attribute | Type | Description |
-| -----------|---------| ----------- |
-| id  | Integer | Unique identifier of the resource `readonly` |
-| name | string | Vehicle type name |
-| description | string | Vehicle type description |
-| created_at | date-time | Date time vehicle type was created at `readonly` |
-| updated_at | date-time | Date time vehicle type was updated at `readonly` |
-| deleted_at | date-time | Date time vehicle type was deleted at |
-
-### Create a Vehicle Type
 
 > Create a vehicle type request:
 
@@ -26,7 +10,7 @@ This service requires authentication.
 }
 ```
 
-> Response
+> Create a Vehicle Type Response
 
 ```json
 {
@@ -45,18 +29,9 @@ This service requires authentication.
     ]
 }
 ```
+> List Vehicle Type Request: `https://api.amitruck.co/v2/vehicle-types`
 
-This API is used to add new vehicle types to the Amitruck 2.0 platform. 
-
-* URL: `v2/vehicle-types/create`
-* Http Method: `POST`
-* Content-Type: `application/json`
-
-### List Vehicle Types
-
-> Request: https://api.amitruck.co/v2/vehicle-types
-
-> Response:
+> List Vehicle Type Response:
 
 ```json
 {
@@ -84,7 +59,34 @@ This API is used to add new vehicle types to the Amitruck 2.0 platform.
 }
 ```
 
+The vehicle types service allows you to add a new vehicle type in terms of the Trucks, Tuktuk, Bikes, Van or any other vehicle types.
+These types are listed on during the vehicle registration page and the vehicle services depend on it. 
+
+This service requires authentication.
+
+### Vehicle Type Properties
+
+| Attribute | Type | Description |
+| -----------|---------| ----------- |
+| id  | Integer | Unique identifier of the resource `readonly` |
+| name | string | Vehicle type name |
+| description | string | Vehicle type description |
+| created_at | date-time | Date time vehicle type was created at `readonly` |
+| updated_at | date-time | Date time vehicle type was updated at `readonly` |
+| deleted_at | date-time | Date time vehicle type was deleted at |
+
+### Create a Vehicle Type
+
+This API is used to add new vehicle types to the Amitruck 2.0 platform. 
+
+* URL: `v2/vehicle-types/create`
+* Http Method: `POST`
+* Content-Type: `application/json`
+
+### List Vehicle Types
+
 This API returns a collection of all Amitruck 2.0 vehicle types.
+
 * URL: `v2/vehicle-types`
 * Http Method: `GET`
 
