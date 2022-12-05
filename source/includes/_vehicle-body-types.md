@@ -1,22 +1,6 @@
 ## VEHICLE BODY TYPE
-This service is used by the Amitruck to create, read, update, delete or restore vehicle body types such as normal, refridgerated, Fiber, Tippa and more body types.
-Vehicle body type service requires authentications, and the user must have an Amitruck account before they can use it.
 
-#### VEHICLE BODY TYPE PROPERTIES
-
-| Attribute | Type | Description |
-| -----------|---------| ----------- |
-| id  | Integer | Unique identifier of the resource `readonly` |
-| name | string | Vehicle body type name |
-| slug | string | Vehicle body type slug `readonly` |
-| description | string | Vehicle body type description |
-| created_at | date-time | Date time Vehicle body type was added `readonly` |
-| updated_at | date-time | Date time Vehicle body type was modified `readonly` |
-| deleted_at | date-time | Date time Vehicle body type was soft deleted |
-
-### CREATE A VEHICLE BODY TYPE
-
-> REQUEST
+> CREATE A VEHICLE BODY REQUEST
 
 ```json
 {
@@ -25,7 +9,7 @@ Vehicle body type service requires authentications, and the user must have an Am
 }
 ```
 
-> RESPONSE
+> CREATE A VEHICLE BODY RESPONSE
 
 ```json
 {
@@ -46,15 +30,7 @@ Vehicle body type service requires authentications, and the user must have an Am
 }
 ```
 
-This endpoint creates a new vehicle body type to the platform.
-
-- URL: `v2/vehicles/body/types/create`
-- METHOD: `POST`
-- CONTENT-TYPE: `application/json`
-
-### LIST VEHICLE BODY TYPES
-
-> LIST RESPONSE
+> LIST VEHICLE BODY TYPES RESPONSE
 
 ```json
 {
@@ -84,14 +60,7 @@ This endpoint creates a new vehicle body type to the platform.
 }
 ```
 
-Retrieves all registered vehicle body types from Amitruck 2.0
-
-- URL: `v2/vehicles/body/types`
-- METHOD: `GET`
-
-### RETRIEVES A SINGLE VEHICLE BODY TYPE
-
-> RESPONSE
+> RETRIEVE A VEHICLE BODY TYPE RESPONSE
 
 ```json
 {
@@ -111,14 +80,7 @@ Retrieves all registered vehicle body types from Amitruck 2.0
 }
 ```
 
-Retrieves a single vehicle body type by its resource ID.
-
-- URL: `v2/vehicles/body/types/{ID}`
-- METHOD: `GET`
-
-### UPDATE A VEHICLE BODY TYPE
-
-> REQUEST
+> UPDATE A VEHICLE BODY TYPE REQUEST
 
 ```json
 {
@@ -128,7 +90,7 @@ Retrieves a single vehicle body type by its resource ID.
 }
 ```
 
-> RESPONSE
+> UPDATE A VEHICLE BODY TYPE RESPONSE
 
 ```json
 {
@@ -149,13 +111,7 @@ Retrieves a single vehicle body type by its resource ID.
 }
 ```
 
-- URL: `v2/vehicles/body/types/{ID}/update`
-- METHOD: `PUT`
-- CONTENT-TYPE: `application/json`
-
-### DELETE A VEHICLE BODY TYPE
-
-> DELETE RESPONSE
+> DELETE A VEHICLE BODY TYPE RESPONSE
 
 ```json
 {
@@ -165,18 +121,7 @@ Retrieves a single vehicle body type by its resource ID.
 }
 ```
 
-Soft delete an existing vehicle body type. The deleted vehicle type can be restored later on if needed, hence, the need for the soft delete.
-
-- URL: `v2/vehicles/body/types/{ID}/delete`
-- METHOD: `DELETE`
-- CONTENT-TYPE: `application/json`
-
-
-
-### RESTORE A DELETED VEHICLE BODY TYPE
-> REQUEST: `v2/vehicles/body/types/{ID}/restore`
-
-> RESPONSE
+> DELETE A VEHICLE BODY TYPE RESPONSE
 
 ```json
 {
@@ -195,4 +140,62 @@ Soft delete an existing vehicle body type. The deleted vehicle type can be resto
     ]
 }
 ```
+
+This service is used by the Amitruck to create, read, update, delete or restore vehicle body types such as normal, refridgerated, Fiber, Tippa and more body types.
+Vehicle body type service requires authentications, and the user must have an Amitruck account before they can use it.
+
+#### VEHICLE BODY TYPE PROPERTIES
+
+| Attribute | Type | Description |
+| -----------|---------| ----------- |
+| id  | Integer | Unique identifier of the resource `readonly` |
+| name | string | Vehicle body type name |
+| slug | string | Vehicle body type slug `readonly` |
+| description | string | Vehicle body type description |
+| created_at | date-time | Date time Vehicle body type was added `readonly` |
+| updated_at | date-time | Date time Vehicle body type was modified `readonly` |
+| deleted_at | date-time | Date time Vehicle body type was soft deleted |
+
+### CREATE A VEHICLE BODY TYPE
+
+This endpoint creates a new vehicle body type to the platform.
+
+- URL: `v2/vehicles/body/types/create`
+- METHOD: `POST`
+- CONTENT-TYPE: `application/json`
+
+### LIST VEHICLE BODY TYPES
+
+Retrieves all registered vehicle body types from Amitruck 2.0
+
+- URL: `v2/vehicles/body/types`
+- METHOD: `GET`
+
+### RETRIEVES A SINGLE VEHICLE BODY TYPE
+
+Retrieves a single vehicle body type by its resource ID.
+
+- URL: `v2/vehicles/body/types/{ID}`
+- METHOD: `GET`
+
+### UPDATE A VEHICLE BODY TYPE
+
+- URL: `v2/vehicles/body/types/{ID}/update`
+- METHOD: `PUT`
+- CONTENT-TYPE: `application/json`
+
+### DELETE A VEHICLE BODY TYPE
+
+Soft delete an existing vehicle body type. The deleted vehicle type can be restored later on if needed, hence, the need for the soft delete.
+
+- URL: `v2/vehicles/body/types/{ID}/delete`
+- METHOD: `DELETE`
+- CONTENT-TYPE: `application/json`
+
+
+
+### RESTORE A DELETED VEHICLE BODY TYPE
+
+> REQUEST: `v2/vehicles/body/types/{ID}/restore`
+
 This API makes it possible to restore a soft-deleted vehicle body type by passing the deleted vehicle body type ID as a parameter.
