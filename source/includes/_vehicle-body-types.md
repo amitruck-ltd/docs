@@ -141,6 +141,30 @@
 }
 ```
 
+
+> RESTORE A VEHICLE BODY TYPE REQUEST: `v2/vehicles/body/types/{ID}/restore`
+
+> RESTORE A VEHICLE BODY TYPE RESPONSE
+
+```json
+{
+  "code": 200,
+  "status": "success",
+  "message": "Vehicle body type restored."
+  "data": [
+    {
+      "id": 1,
+      "name": "Root Top",
+      "slug": "root-top",
+      "description": "Vehicle covered at the top",
+      "created_at": "2022-12-01T08: 12: 22.049585Z",
+      "updated_at": "2022-12-01T08: 12: 22.049585Z",
+      "deleted_at": null
+    }
+  ]
+}
+```
+
 This service is used by the Amitruck to create, read, update, delete or restore vehicle body types such as normal, refridgerated, Fiber, Tippa and more body types.
 Vehicle body type service requires authentications, and the user must have an Amitruck account before they can use it.
 
@@ -196,6 +220,5 @@ Soft delete an existing vehicle body type. The deleted vehicle type can be resto
 
 ### RESTORE A DELETED VEHICLE BODY TYPE
 
-> REQUEST: `v2/vehicles/body/types/{ID}/restore`
 
 This API makes it possible to restore a soft-deleted vehicle body type by passing the deleted vehicle body type ID as a parameter.
