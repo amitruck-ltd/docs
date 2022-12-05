@@ -946,7 +946,54 @@ These types are listed on during the vehicle registration page and the vehicle s
 <li>Http Method: <code>DELETE</code></li>
 <li>Content-Type: <code>application/json</code></li>
 </ul>
-<h2 id='vehicle-body-type'>VEHICLE BODY TYPE</h2><h3 id='create-a-vehicle-body-type'>CREATE A VEHICLE BODY TYPE</h3>
+<h2 id='vehicle-body-type'>VEHICLE BODY TYPE</h2>
+<p>This service is used by the Amitruck to create, read, update, delete or restore vehicle body types such as normal, refridgerated, Fiber, Tippa and more body types.
+Vehicle body type service requires authentications, and the user must have an Amitruck account before they can use it.</p>
+<h4 id='vehicle-body-type-properties'>VEHICLE BODY TYPE PROPERTIES</h4>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Integer</td>
+<td>Unique identifier of the resource <code>readonly</code></td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>Vehicle body type name</td>
+</tr>
+<tr>
+<td>slug</td>
+<td>string</td>
+<td>Vehicle body type slug <code>readonly</code></td>
+</tr>
+<tr>
+<td>description</td>
+<td>string</td>
+<td>Vehicle body type description</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>date-time</td>
+<td>Date time Vehicle body type was added <code>readonly</code></td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>date-time</td>
+<td>Date time Vehicle body type was modified <code>readonly</code></td>
+</tr>
+<tr>
+<td>deleted_at</td>
+<td>date-time</td>
+<td>Date time Vehicle body type was soft deleted</td>
+</tr>
+</tbody></table>
+<h3 id='create-a-vehicle-body-type'>CREATE A VEHICLE BODY TYPE</h3>
 <blockquote>
 <p>REQUEST</p>
 </blockquote>
@@ -956,27 +1003,25 @@ These types are listed on during the vehicle registration page and the vehicle s
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>
 <blockquote>
-<p>RESPONSE
-<code>json
-{
-    &quot;code&quot;: 201,
-    &quot;status&quot;: &quot;success&quot;,
-    &quot;message&quot;: &quot;Truck vehicle body type was added&quot;,
-    &quot;data&quot;: [
-        {
-            &quot;id&quot;: 1,
-            &quot;name&quot;: &quot;Truck&quot;,
-            &quot;slug&quot;: &quot;truck&quot;,
-            &quot;description&quot;: &quot;Vehicle that can transport 5T&quot;,
-            &quot;created_at&quot;: &quot;2022-12-01T08: 12: 22.049585Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-12-01T08: 12: 22.049585Z&quot;,
-            &quot;deleted_at&quot;: null
-        }
-    ]
-}
-</code></p>
+<p>RESPONSE</p>
 </blockquote>
-
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">201</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Truck vehicle body type was added"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Truck"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"truck"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Vehicle that can transport 5T"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-12-01T08: 12: 22.049585Z"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-12-01T08: 12: 22.049585Z"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"deleted_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
 <p>This endpoint creates a new vehicle body type to the platform.</p>
 
 <ul>
