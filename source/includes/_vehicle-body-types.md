@@ -165,6 +165,18 @@
 }
 ```
 
+> VEHICLE BODY TYPE HEALTHCHECK REQUEST
+
+```json
+{
+    "code": 200,
+    "status": "success",
+    "message": "Vehicle body type service is healthy."
+}
+```
+
+
+
 This service is used by the Amitruck to create, read, update, delete or restore vehicle body types such as normal, refridgerated, Fiber, Tippa and more body types.
 Vehicle body type service requires authentications, and the user must have an Amitruck account before they can use it.
 
@@ -220,5 +232,11 @@ Soft delete an existing vehicle body type. The deleted vehicle type can be resto
 
 ### RESTORE A DELETED VEHICLE BODY TYPE
 
-
 This API makes it possible to restore a soft-deleted vehicle body type by passing the deleted vehicle body type ID as a parameter.
+
+### HEALTHCHECK ENDPOINT
+
+This endpoint helps the caller to know whether or not the API is up and running before proceeding with other requests. Some of the platform requires a health-check API. For example the infrastructure as a service requires this endpoint URL to know when to auto mitigate service down time
+
+- URL: `v2/vehicles/body/types/hearthcheck`
+- METHOD: `GET`
