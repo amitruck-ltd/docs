@@ -356,6 +356,9 @@
                   <li>
                     <a href="#vehicle-types" class="toc-h2 toc-link" data-title="Vehicle Types">Vehicle Types</a>
                   </li>
+                  <li>
+                    <a href="#vehicle-body-type" class="toc-h2 toc-link" data-title="VEHICLE BODY TYPE">VEHICLE BODY TYPE</a>
+                  </li>
               </ul>
           </li>
           <li>
@@ -943,6 +946,175 @@ These types are listed on during the vehicle registration page and the vehicle s
 <li>Http Method: <code>DELETE</code></li>
 <li>Content-Type: <code>application/json</code></li>
 </ul>
+<h2 id='vehicle-body-type'>VEHICLE BODY TYPE</h2><h3 id='create-a-vehicle-body-type'>CREATE A VEHICLE BODY TYPE</h3>
+<blockquote>
+<p>REQUEST
+<code>json
+{
+    &quot;name&quot;: &quot;vehicle body type Name&quot;,
+    &quot;description&quot;: &quot;vehicle body type Description&quot;
+}
+</code></p>
+
+<p>RESPONSE
+<code>json
+{
+    &quot;code&quot;: 201,
+    &quot;status&quot;: &quot;success&quot;,
+    &quot;message&quot;: &quot;Truck vehicle body type was added&quot;,
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: 1,
+            &quot;name&quot;: &quot;Truck&quot;,
+            &quot;slug&quot;: &quot;truck&quot;,
+            &quot;description&quot;: &quot;Vehicle that can transport 5T&quot;,
+            &quot;created_at&quot;: &quot;2022-12-01T08: 12: 22.049585Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-12-01T08: 12: 22.049585Z&quot;,
+            &quot;deleted_at&quot;: null
+        }
+    ]
+}
+</code></p>
+</blockquote>
+
+<p>This endpoint creates a new vehicle body type to the platform.
+- URL: <code>v2/vehicles/body/types/create</code>
+- METHOD: <code>POST</code>
+- CONTENT-TYPE: <code>application/json</code></p>
+<h3 id='list-vehicle-body-types'>LIST VEHICLE BODY TYPES</h3>
+<blockquote>
+<p>LIST RESPONSE</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"vehicle body types retrieved successfully"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Gary Schneider"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"gary-schneider"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Represent kitchen I water present"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-12-01T08:24:32.605194Z"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-12-01T08:24:32.605194Z"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"deleted_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Erica Rose"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eric-rose"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Police number focus foot test."</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-12-01T08:24:32.605194Z"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-12-01T08:24:32.605194Z"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"deleted_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>Retrieves all registered vehicle body types from Amitruck 2.0
+- URL: <code>v2/vehicles/body/types</code>
+- METHOD: <code>GET</code></p>
+<h3 id='retrieves-a-single-vehicle-body-type'>RETRIEVES A SINGLE VEHICLE BODY TYPE</h3>
+<blockquote>
+<p>RESPONSE</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Truck vehicle body type was added"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Truck"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Vehicle that can transport 5T"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-12-01T08: 12: 22.049585Z"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-12-01T08: 12: 22.049585Z"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"deleted_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>Retrieves a single vehicle body type by its resource ID.</p>
+
+<ul>
+<li>URL: <code>v2/vehicles/body/types/{ID}</code></li>
+<li>METHOD: <code>GET</code></li>
+</ul>
+<h3 id='update-a-vehicle-body-type'>UPDATE A VEHICLE BODY TYPE</h3>
+<blockquote>
+<p>REQUEST
+<code>json
+{
+    &quot;name&quot;: &quot;Body type Name Updated&quot;,
+    &quot;slug&quot;: &quot;name-updated&quot;
+    &quot;description&quot;: &quot;Description Updated&quot;
+}
+</code></p>
+
+<p>RESPONSE</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"vehicle body type successfully updated"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Body type Name Updated."</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"body-type-name-updated"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Description Updated"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-12-01T08:28:14.683819Z"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-12-01T08:28:14.687819Z"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"deleted_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<ul>
+<li>URL: <code>v2/vehicles/body/types/{ID}/update</code></li>
+<li>METHOD: <code>PUT</code></li>
+<li>CONTENT-TYPE: <code>application/json</code></li>
+</ul>
+<h3 id='delete-a-vehicle-body-type'>DELETE A VEHICLE BODY TYPE</h3>
+<blockquote>
+<p>DELETE RESPONSE</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"vehicle body type delete successful."</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>Soft delete an existing vehicle body type. The deleted vehicle type can be restored later on if needed, hence, the need for the soft delete.</p>
+
+<ul>
+<li>URL: <code>v2/vehicles/body/types/{ID}/delete</code></li>
+<li>METHOD: <code>DELETE</code></li>
+<li>CONTENT-TYPE: <code>application/json</code></li>
+</ul>
+<h3 id='restore-a-deleted-vehicle-body-type'>RESTORE A DELETED VEHICLE BODY TYPE</h3>
+<blockquote>
+<p>REQUEST: <code>v2/vehicles/body/types/{ID}/restore</code></p>
+
+<p>RESPONSE</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"vehicle body type restored."</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Name Updated."</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Description Updated"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-12-01T08:28:14.683819Z"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-12-01T08:28:14.687819Z"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"deleted_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This API makes it possible to restore a soft-deleted vehicle body type by passing the deleted vehicle body type ID as a parameter.</p>
 <h1 id='trips-and-orders'>Trips and Orders</h1>
 <p>This section cintains API documentatio for trips </p>
 <h1 id='attendances'>Attendances</h1><h1 id='billing'>Billing</h1>
