@@ -1,7 +1,9 @@
 ## VEHICLE BODY TYPE
 
 ### CREATE A VEHICLE BODY TYPE
+
 > REQUEST
+
 ```json
 {
     "name": "vehicle body type Name",
@@ -30,6 +32,7 @@
 ```
 
 This endpoint creates a new vehicle body type to the platform.
+
 - URL: `v2/vehicles/body/types/create`
 - METHOD: `POST`
 - CONTENT-TYPE: `application/json`
@@ -67,6 +70,7 @@ This endpoint creates a new vehicle body type to the platform.
 ```
 
 Retrieves all registered vehicle body types from Amitruck 2.0
+
 - URL: `v2/vehicles/body/types`
 - METHOD: `GET`
 
@@ -100,6 +104,7 @@ Retrieves a single vehicle body type by its resource ID.
 ### UPDATE A VEHICLE BODY TYPE
 
 > REQUEST
+
 ```json
 {
     "name": "Body type Name Updated",
