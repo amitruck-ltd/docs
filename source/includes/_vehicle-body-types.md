@@ -1,4 +1,18 @@
 ## VEHICLE BODY TYPE
+This service is used by the Amitruck to create, read, update, delete or restore vehicle body types such as normal, refridgerated, Fiber, Tippa and more body types.
+Vehicle body type service requires authentications, and the user must have an Amitruck account before they can use it.
+
+#### VEHICLE BODY TYPE PROPERTIES
+
+| Attribute | Type | Description |
+| -----------|---------| ----------- |
+| id  | Integer | Unique identifier of the resource `readonly` |
+| name | string | Vehicle body type name |
+| slug | string | Vehicle body type slug `readonly` |
+| description | string | Vehicle body type description |
+| created_at | date-time | Date time Vehicle body type was added `readonly` |
+| updated_at | date-time | Date time Vehicle body type was modified `readonly` |
+| deleted_at | date-time | Date time Vehicle body type was soft deleted |
 
 ### CREATE A VEHICLE BODY TYPE
 
@@ -12,6 +26,7 @@
 ```
 
 > RESPONSE
+
 ```json
 {
     "code": 201,
