@@ -1080,6 +1080,28 @@ These types are listed on during the vehicle registration page and the vehicle s
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>
+<blockquote>
+<p>RESTORE A VEHICLE BODY TYPE REQUEST: <code>v2/vehicles/body/types/{ID}/restore</code></p>
+
+<p>RESTORE A VEHICLE BODY TYPE RESPONSE</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Vehicle body type restored."</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Root Top"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"root-top"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Vehicle covered at the top"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-12-01T08: 12: 22.049585Z"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-12-01T08: 12: 22.049585Z"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"deleted_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
 <p>This service is used by the Amitruck to create, read, update, delete or restore vehicle body types such as normal, refridgerated, Fiber, Tippa and more body types.
 Vehicle body type service requires authentications, and the user must have an Amitruck account before they can use it.</p>
 <h4 id='vehicle-body-type-properties'>VEHICLE BODY TYPE PROPERTIES</h4>
@@ -1163,10 +1185,6 @@ Vehicle body type service requires authentications, and the user must have an Am
 <li>CONTENT-TYPE: <code>application/json</code></li>
 </ul>
 <h3 id='restore-a-deleted-vehicle-body-type'>RESTORE A DELETED VEHICLE BODY TYPE</h3>
-<blockquote>
-<p>REQUEST: <code>v2/vehicles/body/types/{ID}/restore</code></p>
-</blockquote>
-
 <p>This API makes it possible to restore a soft-deleted vehicle body type by passing the deleted vehicle body type ID as a parameter.</p>
 <h1 id='trips-and-orders'>Trips and Orders</h1>
 <p>This section cintains API documentatio for trips </p>
