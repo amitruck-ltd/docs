@@ -1,4 +1,4 @@
-## Vehicle Types
+## VEHICLE TYPES
 > CREATE REQUEST
 
 ```json
