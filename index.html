@@ -1102,6 +1102,15 @@ These types are listed on during the vehicle registration page and the vehicle s
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>
+<blockquote>
+<p>VEHICLE BODY TYPE HEALTHCHECK REQUEST</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Vehicle body type service is healthy."</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
 <p>This service is used by the Amitruck to create, read, update, delete or restore vehicle body types such as normal, refridgerated, Fiber, Tippa and more body types.
 Vehicle body type service requires authentications, and the user must have an Amitruck account before they can use it.</p>
 <h4 id='vehicle-body-type-properties'>VEHICLE BODY TYPE PROPERTIES</h4>
@@ -1186,6 +1195,13 @@ Vehicle body type service requires authentications, and the user must have an Am
 </ul>
 <h3 id='restore-a-deleted-vehicle-body-type'>RESTORE A DELETED VEHICLE BODY TYPE</h3>
 <p>This API makes it possible to restore a soft-deleted vehicle body type by passing the deleted vehicle body type ID as a parameter.</p>
+<h3 id='healthcheck-endpoint'>HEALTHCHECK ENDPOINT</h3>
+<p>This endpoint helps the caller to know whether or not the API is up and running before proceeding with other requests. Some of the platform requires a health-check API. For example the infrastructure as a service requires this endpoint URL to know when to auto mitigate service down time</p>
+
+<ul>
+<li>URL: <code>v2/vehicles/body/types/hearthcheck</code></li>
+<li>METHOD: <code>GET</code></li>
+</ul>
 <h1 id='trips-and-orders'>Trips and Orders</h1>
 <p>This section cintains API documentatio for trips </p>
 <h1 id='attendances'>Attendances</h1><h1 id='billing'>Billing</h1>
