@@ -17,6 +17,7 @@ includes:
   - drivers
   - vehicles
   - vehicle-types
+  - vehicle-body-types
   - trips
   - attendance
   - billing
