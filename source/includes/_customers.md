@@ -64,3 +64,40 @@ On a preffered client navigate to the Register endpoint with URL [https://dev.ap
 | METHOD  | POST                                               |
 | URL     | https://dev.api.amitruck.co/v2/customers/register/ |
 | HEADERS | Content-Type: "application/json"                   |
+
+> Individual Customer Registration Request Payload:
+
+```json
+{
+  "names": "John Doe",
+  "email": "johndoe@amitruck.com",
+  "phone_number": "254757161010",
+  "password": "Test1234",
+  "password_confirm": "Test1234",
+  "accepted_terms_and_condition": 1
+}
+```
+
+> Individual Customer Registration Response Payload:
+
+```json
+{
+  "code": 201,
+  "status": "success",
+  "description": "Customer Registered Successfully. Verification Notifications are sent successfully",
+  "data": [
+    {
+      "id": 1,
+      "names": "John Doe",
+      "email": "johndoe@amitruck.com",
+      "phone_number": "254757161010",
+      "registration_type": "individual",
+      "current_team_id": 3,
+      "accepted_terms_and_condition": 1,
+      "success_at": "2022-11-09T11:09:54",
+      "updated_at": "2022-11-09T11:09:54",
+      "tc_accepted_at": "2022-11-09T11:09:54"
+    }
+  ]
+}
+```
