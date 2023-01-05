@@ -5,7 +5,7 @@
 
 ```json
 {
-    "email": "testuser@amtruck.com",
+    "email": "testamitruckuser@amtruck.com",
     "phone_number": "+25470052355", 
     "names": "Test User",
     "password": "Qazwsxedcrfv123!",
@@ -26,7 +26,7 @@
         {
             "id": 37,
             "names": "Test User",
-            "email": "testuser@amtruck.com",
+            "email": "testamitruckuser@amtruck.com",
             "phone_number": "+25470052355"
         }
     ]
